@@ -12,6 +12,7 @@ namespace HelloXamarin
         public MainPage()
         {
             InitializeComponent();
+			btnCrash.Clicked += (s, e) => { throw new NotImplementedException(); };
         }
     }
 }

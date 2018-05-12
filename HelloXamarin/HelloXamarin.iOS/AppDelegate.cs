@@ -5,6 +5,10 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 namespace HelloXamarin.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -24,6 +28,10 @@ namespace HelloXamarin.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
+			AppCenter.Start("7bb4ecdf-3606-4ad0-8b98-5c668417aaa2",
+                   typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("7bb4ecdf-3606-4ad0-8b98-5c668417aaa2", typeof(Analytics), typeof(Crashes));
 
             return base.FinishedLaunching(app, options);
         }

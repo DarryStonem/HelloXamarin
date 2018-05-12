@@ -13,9 +13,12 @@ namespace HelloXamarin
     {
         public MainPage()
         {
-            InitializeComponent();
-			Analytics.TrackEvent("Welcome Screen");
-			btnCrash.Clicked += (s, e) => { throw new NotImplementedException(); };
+            InitializeComponent();         
+			btnCrash.Clicked += (s, e) => 
+			{ 
+				Analytics.TrackEvent("Welcome Screen");
+				throw new NotImplementedException(); 
+			};
         }
     }
 }

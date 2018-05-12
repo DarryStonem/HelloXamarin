@@ -7,6 +7,6 @@
         <!--  Place new controls here  -->
         <Label HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
-               Text="Welcome to class!" />
+               Text="Welcome to my life!" />
     </StackLayout>
 </ContentPage>
